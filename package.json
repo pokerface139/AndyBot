@@ -1,0 +1,31 @@
+{
+  "name": "andybot",
+  "version": "0.1.0",
+  "description": "A discord bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pokerface139/AndyBot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "Nam Lesage",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pokerface139/AndyBot/issues"
+  },
+  "homepage": "https://github.com/pokerface139/AndyBot#readme",
+  "devDependencies": {
+    "dotenv": "^5.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1"
+  },
+  "dependencies": {
+    "discord.js-commando": "^0.9.0"
+  }
+}

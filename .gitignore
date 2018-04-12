@@ -1,0 +1,6 @@
+# Remove local environment variable
+.env
+
+# Ignore installed modules
+node_modules/
+package-lock.json

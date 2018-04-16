@@ -8,9 +8,18 @@ module.exports = {
         if (!voiceChannel) {
             return message.reply('You must be in a voice channel if you want to hear my sweet voice!');
         }
-        const connection = await voiceChannel.join();
+
+        // Already a connection
+        let connection = client.voiceConnections.get(message.guild.id);
+        if (connection) {
+            if (connection.dispatcher) { return; }
+        }
+        else {
+            connection = await voiceChannel.join();
+        }
+
         const dispatcher = connection.playStream(ytdl('https://www.youtube.com/watch?v=3WAOxKOmR90', { filter: 'audioonly' }));
-        dispatcher.on('end', () => {
+        dispatcher.once('end', () => {
             voiceChannel.leave();
         });
     }

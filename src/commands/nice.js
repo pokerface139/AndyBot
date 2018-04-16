@@ -2,7 +2,7 @@ const ytdl = require('ytdl-core');
 
 module.exports = {
     name: 'nice',
-    description: 'A voice command to express your satisfaction',
+    description: 'A voice command to express your satisfaction with the most famous nice on the internet',
     async execute(client, message) {
         const voiceChannel = message.member.voiceChannel;
         if (!voiceChannel) {

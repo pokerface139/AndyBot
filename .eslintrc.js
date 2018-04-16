@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     "extends": "eslint:recommended",
     "env": {
         "node": true,
@@ -9,13 +9,12 @@ export default {
     },
     "rules": {
         "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
-        "comma-dangle": ["error", "always-multiline"],
         "comma-spacing": "error",
         "comma-style": "error",
         "curly": ["error", "multi-line", "consistent"],
         "dot-location": ["error", "property"],
         "handle-callback-err": "off",
-        "indent": ["error", "tab"],
+        "indent": ["error", 4],
         "max-nested-callbacks": ["error", { "max": 4 }],
         "max-statements-per-line": ["error", { "max": 2 }],
         "no-console": "off",
@@ -26,8 +25,9 @@ export default {
         "no-multi-spaces": "error",
         "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1, "maxBOF": 0 }],
         "no-shadow": ["error", { "allow": ["err", "resolve", "reject"] }],
-        "no-trailing-spaces": ["error"],
+        "no-trailing-spaces": ["error", { "skipBlankLines": true }],
         "no-var": "error",
+        "no-unused-vars": "warn",
         "object-curly-spacing": ["error", "always"],
         "prefer-const": "error",
         "quotes": ["error", "single"],
